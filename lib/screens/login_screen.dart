@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:proyecto_digilist/utilities/constants.dart';
 
+import 'Inici.dart';
+import 'registro.dart';
+
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -15,6 +18,14 @@ class _LoginScreenState extends State<LoginScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
+        new Center(
+          child: Image(
+          image:  new AssetImage('logos/logo_proyecto.png'),
+          height: 300,
+          alignment: Alignment.center,        
+        ),
+    ),
+
         Text(
           'Email',
           style: TextStyle(
@@ -141,13 +152,14 @@ class _LoginScreenState extends State<LoginScreen> {
       child: TextButton(
         style: TextButton.styleFrom(
           foregroundColor: Color.fromARGB(255, 0, 0, 0),
-                  elevation: 2,
-                  backgroundColor: Color.fromARGB(255, 253, 253, 253),
+          elevation: 2,
+          backgroundColor: Color.fromARGB(255, 253, 253, 253),
         ),
         onPressed: () {
-          Navigator.pushNamed(context, '/');},
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => Inicio_page()));
+        },
         child: Text('Login'),
-        
       ),
     );
   }
@@ -155,9 +167,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget _buildSignInWithText() {
     return Column(
       children: <Widget>[
+        SizedBox(height: 20.0),
         Text(
           '- OR -',
+          
           style: TextStyle(
+            
             color: Color.fromARGB(255, 0, 0, 0),
             fontWeight: FontWeight.w400,
           ),
@@ -190,6 +205,7 @@ class _LoginScreenState extends State<LoginScreen> {
               blurRadius: 6.0,
             ),
           ],
+          
           image: DecorationImage(
             image: logo,
           ),
@@ -226,28 +242,30 @@ class _LoginScreenState extends State<LoginScreen> {
       onTap: () => print('Sign Up Button Pressed'),
       child: RichText(
         text: TextSpan(
-          children: [
-            TextSpan(
-              text: 'Don\'t have an Account? ',
-              style: TextStyle(
-                color: Color.fromARGB(255, 0, 0, 0),
-                fontSize: 18.0,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            TextSpan(
-              text: 'Sign Up',
-              style: TextStyle(
-                color: Color.fromARGB(255, 0, 0, 0),
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
+         
         ),
       ),
     );
   }
+   Widget _buildLoginBt2n() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10.0),
+      width: double.infinity,
+      child: TextButton(
+        style: TextButton.styleFrom(
+          foregroundColor: Color.fromARGB(255, 0, 0, 0),
+          elevation: 2,
+          backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        ),
+        onPressed: () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => registro()));
+        },
+        child: Text('Registrer'),
+      ),
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -267,8 +285,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     end: Alignment.bottomCenter,
                     colors: [
                       Color.fromARGB(255, 255, 255, 255),
-                      Color.fromARGB(255, 211, 211, 210),
-                      Color.fromARGB(255, 172, 172, 170),
+                      Color.fromARGB(255, 255, 255, 255),
+                      Color.fromARGB(255, 255, 255, 255),
                       Color.fromARGB(255, 114, 114, 114),
                     ],
                     stops: [0.1, 0.4, 0.7, 0.9],
@@ -286,15 +304,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text(
-                        'DIGILIST',
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          fontFamily: 'OpenSans',
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                     
                       SizedBox(height: 30.0),
                       _buildEmailTF(),
                       SizedBox(
@@ -304,6 +314,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       _buildForgotPasswordBtn(),
                       _buildRememberMeCheckbox(),
                       _buildLoginBtn(),
+                      _buildLoginBt2n(),
                       _buildSignInWithText(),
                       _buildSocialBtnRow(),
                       _buildSignupBtn(),
@@ -344,13 +355,13 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }*/
 
-  FlatButton({ void Function() onPressed,  EdgeInsets padding,  Text child}) {}
+  FlatButton({void Function() onPressed, EdgeInsets padding, Text child}) {}
 
   RaisedButton(
-      { double elevation,
-       void Function() onPressed,
-       EdgeInsets padding,
-       RoundedRectangleBorder shape,
-       Color color,
-       Text child}) {}
+      {double elevation,
+      void Function() onPressed,
+      EdgeInsets padding,
+      RoundedRectangleBorder shape,
+      Color color,
+      Text child}) {}
 }

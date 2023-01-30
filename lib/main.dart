@@ -18,10 +18,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Login UI',
-      // debugShowCheckedModeBanner: false,
-      // home: LoginScreen(),
-      initialRoute: '/',
+      title: 'Pagina de inicio',
+      /* initialRoute: '/',
       routes: {
         '/': (context) =>  Home(),
       '/login': (context) =>  LoginScreen(),
@@ -34,7 +32,9 @@ class MyApp extends StatelessWidget {
       '/ticket': (context) =>  Ticket(),
       '/vista_Producto': (context) =>  Vista_Producto(),
       '/envio': (context) =>  Envio(),
-      },
+      }, */
+      debugShowCheckedModeBanner: false,
+      home: LoginScreen(),
     );
   }
 }
