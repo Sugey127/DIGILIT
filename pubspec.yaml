@@ -40,6 +40,7 @@ flutter:
   assets:
    - assets/logos/facebook.jpg
    - assets/logos/google.jpg
+   - assets/logos/logo_proyecto.png
 
 
   fonts:
