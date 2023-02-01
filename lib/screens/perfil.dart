@@ -199,6 +199,7 @@ class perfil extends StatelessWidget {
     );
   }
   
-  RaisedButton({Null Function() onPressed, RoundedRectangleBorder shape, double elevation, EdgeInsets padding, Ink child}) {}
+  RaisedButton({required Null Function() onPressed, required RoundedRectangleBorder shape, required double elevation, required EdgeInsets padding, required Ink child}) {}
+  
 }
 

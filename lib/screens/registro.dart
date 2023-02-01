@@ -201,7 +201,7 @@ class _LoginScreenState extends State<registro> {
               activeColor: Color.fromARGB(255, 255, 255, 255),
               onChanged: (value) {
                 setState(() {
-                  _rememberMe = value;
+                  _rememberMe = value!;
                 });
               },
             ),
@@ -335,14 +335,4 @@ class _LoginScreenState extends State<registro> {
       ),
     );
   }*/
-
-  FlatButton({void Function() onPressed, EdgeInsets padding, Text child}) {}
-
-  RaisedButton(
-      {double elevation,
-      void Function() onPressed,
-      EdgeInsets padding,
-      RoundedRectangleBorder shape,
-      Color color,
-      Text child}) {}
 }

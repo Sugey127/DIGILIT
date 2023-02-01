@@ -126,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
               activeColor: Color.fromARGB(255, 255, 255, 255),
               onChanged: (value) {
                 setState(() {
-                  _rememberMe = value;
+                  
                 });
               },
             ),
@@ -191,7 +191,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildSocialBtn(Function onTap, AssetImage logo) {
     return GestureDetector(
-      onTap: onTap,
+      
       child: Container(
         height: 60.0,
         width: 60.0,
@@ -355,13 +355,13 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }*/
 
-  FlatButton({void Function() onPressed, EdgeInsets padding, Text child}) {}
+  FlatButton({required void Function() onPressed, required EdgeInsets padding, required Text child}) {}
 
   RaisedButton(
-      {double elevation,
-      void Function() onPressed,
-      EdgeInsets padding,
-      RoundedRectangleBorder shape,
-      Color color,
-      Text child}) {}
+      {required double elevation,
+      required void Function() onPressed,
+      required EdgeInsets padding,
+      required RoundedRectangleBorder shape,
+      required Color color,
+      required Text child}) {}
 }
