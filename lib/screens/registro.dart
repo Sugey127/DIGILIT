@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:proyecto_digilist/utilities/constants.dart';
+import 'package:flutter_login_ui/utilities/constants.dart';
 import 'Inici.dart';
+//inicio
 
 class registro extends StatefulWidget {
   @override
@@ -12,18 +13,16 @@ class _LoginScreenState extends State<registro> {
   bool _rememberMe = false;
 
   Widget _nombre() {
-    
     return Column(
-      
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-         new Center(
+        new Center(
           child: Image(
-          image:  new AssetImage('logos/logo_proyecto.png'),
-          height: 300,
-          alignment: Alignment.center,        
+            image: new AssetImage('logos/logo_proyecto.png'),
+            height: 300,
+            alignment: Alignment.center,
+          ),
         ),
-    ),
         Text(
           'Name',
           style: TextStyle(
@@ -51,7 +50,6 @@ class _LoginScreenState extends State<registro> {
               ),
               hintText: 'Enter your Name',
               hintStyle: kHintTextStyle,
-              
             ),
           ),
         ),
@@ -219,8 +217,6 @@ class _LoginScreenState extends State<registro> {
   }
 
 //Aqui va el boton de login
-
- 
 
   Widget _buildSignupBtn() {
     return GestureDetector(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:proyecto_digilist/utilities/constants.dart';
-
+import 'package:flutter_login_ui/utilities/constants.dart';
 import 'Inici.dart';
 import 'registro.dart';
 
+//inicio
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -126,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
               activeColor: Color.fromARGB(255, 255, 255, 255),
               onChanged: (value) {
                 setState(() {
-                  
+                  _rememberMe = value!;
                 });
               },
             ),
@@ -191,7 +191,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildSocialBtn(Function onTap, AssetImage logo) {
     return GestureDetector(
-      
       child: Container(
         height: 60.0,
         width: 60.0,
@@ -355,13 +354,5 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }*/
 
-  FlatButton({required void Function() onPressed, required EdgeInsets padding, required Text child}) {}
-
-  RaisedButton(
-      {required double elevation,
-      required void Function() onPressed,
-      required EdgeInsets padding,
-      required RoundedRectangleBorder shape,
-      required Color color,
-      required Text child}) {}
+  
 }

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_ui/screens/perfil.dart';
 import 'package:flutter_login_ui/screens/politicas.dart';
-//inicio
 
 import 'Inici.dart';
-import 'carritoItemSamples.dart';
-import 'catalago.dart';
+import 'carrito.dart';
+import 'categoriesWidget.dart';
 import 'configuraciones.dart';
+import 'itemsWidget.dart';
 import 'login_screen.dart';
 import 'notificaciones.dart';
+//inicio
 
-void main() => runApp(carrito());
+void main() => runApp(catalago());
 
-class carrito extends StatelessWidget {
+class catalago extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -119,58 +120,75 @@ class carrito extends StatelessWidget {
         ),
       ),
             appBar: AppBar(
-              title: const Text('Registro de cuenta'),
+              title: const Text('Catalago'),
             ),
             body: ListView(
               children: [
-                Container(
-                  height: 700,
-                  padding: EdgeInsets.only(top: 15),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 185, 185, 187),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(35),
-                      topRight: Radius.circular(35)
-                    ),
-                  ),
-                  child: Column(children: [
-                      carritoItemSamples(),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
+               Container(
+                margin: EdgeInsets.symmetric(horizontal: 15),
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                height: 50,
+                decoration:  BoxDecoration(
+                  color: Color(0xFFEDECF2),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(left: 5),
+                      height: 200,
+                      width: 400,
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: " Search here .............",
                         ),
-                        margin: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-                        padding: EdgeInsets.all(10),
-                        child: Row(children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Color(0xFF4C53A5),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Icon(
-                              Icons.add,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: 10),
-                            child: Text(
-                              "Add Coupon Code",
-                              style: TextStyle(
-                                color: Color(0xFF4C53A5),
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                                ),
-                            ),
-                          ),
-                        ],),
                       ),
-                    ],
+                    ),
+                    Icon(
+                      Icons.camera_alt,
+                      size: 27,
+                      color: Color(0xFF4C53A5),
+                    ),
+                  ],
+                ),
+               ),
+               Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.symmetric(
+                  vertical: 20,
+                  horizontal: 10,
+                ),
+                child: Text(
+                  "Categorias",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF4C53A5),
                   ),
                 ),
+               ),
+
+               categoriesWidget(),
+
+               Container(
+                alignment: Alignment.centerLeft,
+                margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                child: Text(
+                  "Best Selling",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF4C53A5),
+                  ),
+                ),
+               ),
+
+               itemsWidget(),
               ],
-           )
-        )
-      );
+            ),
+          )
+        );
   }
 }
+

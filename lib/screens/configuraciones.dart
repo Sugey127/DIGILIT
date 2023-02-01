@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_ui/screens/perfil.dart';
 import 'package:flutter_login_ui/screens/politicas.dart';
 import 'Inici.dart';
 import 'carrito.dart';
 import 'catalago.dart';
-import 'configuraciones.dart';
 import 'login_screen.dart';
 import 'notificaciones.dart';
 //inicio
 
 void main() => runApp(MaterialApp(
-      home: perfil(),
+      home: configuraciones(),
     ));
 
-class perfil extends StatelessWidget {
+class configuraciones extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,7 +115,7 @@ class perfil extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: const Text('Perfil'),
+        title: const Text('Configuraciones'),
       ),
       body: Column(
         children: <Widget>[
@@ -130,28 +130,13 @@ class perfil extends StatelessWidget {
                   ])),
               child: Container(
                 width: double.infinity,
-                height: 250.0,
+                height: 30.0,
                 child: Center(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                          "https://pbs.twimg.com/profile_images/1214740235336200197/vo2eRdio_400x400.jpg",
-                        ),
-                        radius: 50.0,
-                      ),
-                      SizedBox(
-                        height: 10.0,
-                      ),
-                      Text(
-                        "Andrea_Rodriguez",
-                        style: TextStyle(
-                          fontSize: 22.0,
-                          color: Colors.white,
-                        ),
-                      ),
+                    
                       SizedBox(
                         height: 10.0,
                       ),
@@ -167,31 +152,44 @@ class perfil extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "Bio:",
-                    style: TextStyle(
-                        color: Color.fromARGB(255, 254, 119, 0),
-                        fontStyle: FontStyle.normal,
-                        fontSize: 28.0),
-                  ),
+                  
                   SizedBox(
                     height: 10.0,
-                  ),
-                  Text(
-                    'Hola mi nombre es Andrea Rodriguez\n'
-                    'Me gusta mucho conseguir diferentes tipos de refacciones para mi automovil con la facilidad de encontrar todo de una forma rapida',
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w300,
-                      color: Colors.black,
-                      letterSpacing: 2.0,
-                    ),
                   ),
                   Divider(),
                   ListTile(
                     leading: Icon(Icons.camera_front),
-                    title: Text('Numero_Telefonico: 9992345476'),
+                    title: Text('Cambiar_Nombre_De_Usuario: Andrea23'),
+                    onTap: () => null,
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(Icons.camera_front),
+                    title: Text('Cambiar_Correo_Electronico: andrearodriguez.@gmail.com'),
+                    onTap: () => null,
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(Icons.camera_front),
+                    title: Text('Cambiar_Numero_Telefonico: 9992345476'),
+                    onTap: () => null,
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(Icons.camera_front),
+                    title: Text('Cambiar_Nombre: Andrea_Rodriguez'),
+                    onTap: () => null,
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(Icons.camera_front),
+                    title: Text('Cambiar_Correo_Electronico: andrearodriguez.@gmail.com'),
+                    onTap: () => null,
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(Icons.camera_front),
+                    title: Text('Cambiar_Contraseña: ******************'),
                     onTap: () => null,
                   ),
                   Divider(),
@@ -239,6 +237,20 @@ class perfil extends StatelessWidget {
       ),
     );
   }
-  
-  RaisedButton({required Null Function() onPressed, required RoundedRectangleBorder shape, required double elevation, required EdgeInsets padding, required Ink child}) {}
+
+  RaisedButton(
+      {required Null Function() onPressed,
+      required RoundedRectangleBorder shape,
+      required double elevation,
+      required EdgeInsets padding,
+      required Ink child}) {}
 }
+/*
+ Divider(),
+                  ListTile(
+                    leading: Icon(Icons.camera_front),
+                    title: Text('Numero_Telefonico: 9992345476'),
+                    onTap: () => null,
+                  ),
+                  Divider(),
+*/

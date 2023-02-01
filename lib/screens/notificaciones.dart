@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+//inicio
 
 class notificaciones extends StatefulWidget {
   const notificaciones({super.key});
@@ -60,13 +62,9 @@ class _notificaciones extends State<notificaciones> {
                   child: Slidable(
                     key: Key('$item'),
                     startActionPane: ActionPane(
-                      motion: ScrollAction(),
+                      motion: const ScrollMotion(),
                       children: [
-                        SlidableAction(
-                          onPressed: (context) {},
-                          backgroundColor: Colors.blue,
-                          icon: Icons.share,
-                        ),
+                        
                         SlidableAction(
                           onPressed: (context) {
                             setState(() {
@@ -79,13 +77,9 @@ class _notificaciones extends State<notificaciones> {
                       ],
                     ),
                     endActionPane: ActionPane(
-                      motion: ScrollAction(),
+                      motion: const ScrollMotion(),
                       children: [
-                        SlidableAction(
-                          onPressed: (context) {},
-                          backgroundColor: Colors.blue,
-                          icon: Icons.share,
-                        ),
+                        
                         SlidableAction(
                           onPressed: (context) {
                             setState(() {
@@ -149,10 +143,53 @@ class _notificaciones extends State<notificaciones> {
   Future<void> _refresh() {
     return Future.delayed(const Duration(seconds: 0));
   }
-  
-  SlidableAction({required Null Function(dynamic context) onPressed, required MaterialColor backgroundColor, required IconData icon}) {}
-  
-  Slidable({required Key key, required startActionPane, required endActionPane, required Container child}) {}
-  
-  ActionPane({required motion, required List children}) {}
 }
+/*void main() => runApp(notificaciones());
+
+class notificaciones extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        //title: 'material app',
+        home: Scaffold(
+            appBar: AppBar(
+              title: const Text('Notificaciones'),
+            ),
+            body: Slidable(
+              key: const ValueKey(0),
+              startActionPane: ActionPane(
+                motion: const ScrollMotion(),
+                dismissible: DismissiblePane(onDismissed: () {}),
+                children: [
+                  SlidableAction(
+                    onPressed: (_){},
+                    backgroundColor: const Color(0xFFFE4A49),
+                    foregroundColor: Colors.white,
+                    icon: Icons.delete,
+                    label: 'Delete',
+                  ),
+                  SlidableAction(
+                    onPressed: (_){},
+                    backgroundColor: Color.fromARGB(255, 73, 112, 254),
+                    foregroundColor: Colors.white,
+                    icon: Icons.share,
+                    label: 'Share',
+                  ),
+                ],
+              ),
+                child: const ListTile(
+                  leading: Icon(Icons.mail_outline, color: Colors.blue),
+                  title: Text('Compra_exitosa'),
+                  subtitle: Text('Sin_leer'),
+                  trailing: Icon(Icons.keyboard_arrow_left_rounded),
+                  ),
+
+                
+            )
+            
+          )
+        );
+  }
+}*/
+
