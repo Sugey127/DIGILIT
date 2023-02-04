@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_ui/screens/carrito.dart';
-import 'package:flutter_login_ui/screens/catalago.dart';
-import 'package:flutter_login_ui/screens/login_screen.dart';
-import 'package:flutter_login_ui/screens/notificaciones.dart';
-import 'package:flutter_login_ui/screens/perfil.dart';
-import 'package:flutter_login_ui/screens/politicas.dart';
+import 'package:proyecto_digilist/screens/perfil.dart';
+import 'package:proyecto_digilist/screens/politicas.dart';
 
+import 'carrito.dart';
+import 'catalago.dart';
 import 'categoriesWidget.dart';
 import 'configuraciones.dart';
 
 import 'itemsWidget.dart';
+import 'login_screen.dart';
+import 'notificaciones.dart';
 //inicio
 void main() => runApp(Inicio_page());
 
