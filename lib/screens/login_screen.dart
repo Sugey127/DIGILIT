@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../utilities/constants.dart';
+import 'package:flutter_login_ui/utilities/constants.dart';
 import 'Inici.dart';
 import 'registro.dart';
 
@@ -18,13 +18,14 @@ class _LoginScreenState extends State<LoginScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        new Center(
-          child: Image(
-          image:  new AssetImage('logos/logo_proyecto.png'),
-          height: 300,
-          alignment: Alignment.center,        
-        ),
-    ),
+      Center(
+        child: Container(
+          width: 120,
+          height: 120,
+          color: Color.fromARGB(255, 255, 255, 255),
+          child: Image.asset('assets/logos/logo_proyecto.png'),
+      ),
+     ),
 
         Text(
           'Email',

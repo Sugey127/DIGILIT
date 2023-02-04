@@ -16,13 +16,14 @@ class _LoginScreenState extends State<registro> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        new Center(
-          child: Image(
-            image: new AssetImage('logos/logo_proyecto.png'),
-            height: 300,
-            alignment: Alignment.center,
-          ),
-        ),
+        Center(
+        child: Container(
+          width: 120,
+          height: 120,
+          color: Color.fromARGB(255, 255, 255, 255),
+          child: Image.asset('assets/logos/logo_proyecto.png'),
+      ),
+     ),
         Text(
           'Name',
           style: TextStyle(

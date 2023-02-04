@@ -16,10 +16,10 @@ class itemsWidget extends StatelessWidget {
         for (int i = 1; i < 8; i++)
           Container(
             padding: EdgeInsets.only(left: 15, right: 15, top: 10),
-            margin: EdgeInsets.symmetric(vertical: 30, horizontal: 10),
+            margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
             decoration: BoxDecoration(
               color: Color.fromARGB(255, 213, 209, 209),
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
               children: [
@@ -52,9 +52,9 @@ class itemsWidget extends StatelessWidget {
                   child: Container(
                     margin: EdgeInsets.all(10),
                     child: Image.asset(
-                      "images/$i.png",
-                      height: 120,
-                      width: 120,
+                      "assets/images/$i.png",
+                      height: 100,
+                      width: 100,
                     ),
                   ),
                 ),

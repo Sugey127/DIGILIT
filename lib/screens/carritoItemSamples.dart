@@ -30,7 +30,7 @@ class carritoItemSamples extends StatelessWidget {
                   height: 70,
                   width: 70,
                   margin: EdgeInsets.only(right: 15),
-                  child: Image.asset("images/$i.png"),
+                  child: Image.asset("assets/images/$i.png"),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 10),

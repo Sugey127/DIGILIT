@@ -3,7 +3,7 @@ import 'package:flutter_login_ui/screens/perfil.dart';
 import 'package:flutter_login_ui/screens/politicas.dart';
 import 'Inici.dart';
 import 'carrito.dart';
-import 'catalago.dart';
+import 'catalagodos.dart';
 import 'login_screen.dart';
 import 'notificaciones.dart';
 //inicio
@@ -65,7 +65,7 @@ class configuraciones extends StatelessWidget {
                 title: Text('Catalago'),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => catalago()));
+                      MaterialPageRoute(builder: (context) => catalagodos()));
                 },
               ),
               ListTile(

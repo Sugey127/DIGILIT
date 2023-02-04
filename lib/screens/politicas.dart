@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login_ui/screens/perfil.dart';
 import 'Inici.dart';
 import 'carrito.dart';
-import 'catalago.dart';
+import 'catalagodos.dart';
 import 'configuraciones.dart';
 import 'login_screen.dart';
 import 'notificaciones.dart';
@@ -65,7 +65,7 @@ class politicas extends StatelessWidget {
                 title: Text('Catalago'),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => catalago()));
+                      MaterialPageRoute(builder: (context) => catalagodos()));
                 },
               ),
               ListTile(
@@ -167,7 +167,7 @@ class politicas extends StatelessWidget {
                   ),
                   Text(
                     'Normas a cumplir:\n'
-                    'La aplicación obtiene la información que usted proporciona cuando se descarga y se registra la aplicación. Para utilizar algunos de los servicios o acceder a determinados contenidos, deberá proporcionar previamente ciertos datos de carácter personal, que solo serán utilizados para el propósito que fueron recopilados Cuando se registre con nosotros y utilice la aplicación, por lo general, deberá proporcionar (a) su nombre, dirección de correo electrónico, edad, nombre de usuario, contraseña y otra información de registro.',
+                    'La aplicación obtiene la información que usted proporciona cuando se descarga y se registra la aplicación. Deberá proporcionar ciertos datos personales, que solo serán utilizados para el propósito que fueron recopilados Cuando se registre con nosotros y utilice la aplicación, por lo general, se proporciona su nombre, dirección de correo electrónico, edad, nombre de usuario, contraseña y otra información de registro.',
                     style: TextStyle(
                       fontSize: 22.0,
                       fontStyle: FontStyle.italic,

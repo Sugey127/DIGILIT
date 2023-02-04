@@ -22,11 +22,14 @@ class categoriesWidget extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    "images/$i.png",
+                 Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Image.asset(
+                    "assets/images/$i.png",
                     width: 40,
                     height: 40,
-                  ),
+                    ),
+                 ),
                   Text(
                     "Balatas",
                     style: TextStyle(
